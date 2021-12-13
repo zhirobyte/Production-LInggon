@@ -17,10 +17,21 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+
+    // ini adalah model untuk user 
+
     protected $fillable = [
-        'name',
-        'email',
+        'username',
         'password',
+        'google_id',
+        'email',
+        'nama_pembeli',
+        'alamat',
+        'no_telp',
+        'tgl_lahir',
+        'pekerjaan',
+
+
     ];
 
     /**

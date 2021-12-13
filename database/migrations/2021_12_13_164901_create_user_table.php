@@ -24,7 +24,7 @@ class CreateUserTable extends Migration
             $table->string('alamat');
             $table->string('no_telp');
             $table->date('tgl_lahir');
-            $table->string('pekerjaan');;
+            $table->string('pekerjaan');
             $table->rememberToken();
             $table->timestamps();
         });
