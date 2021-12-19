@@ -18,10 +18,13 @@ class User extends Authenticatable
      * @var string[]
      */
 
-    // ini adalah model untuk user 
+    // // ini adalah model untuk user 
+    // model user ini harus berbeda antara penggunaan
+    // username dan name berstatus berbeda, entah dari googlenya
+    // yang memiliki limit penggunaan variable "username"
 
     protected $fillable = [
-        'name',
+        'name', //ini nih yang ane maksud
         'password',
         'google_id',
         'email',

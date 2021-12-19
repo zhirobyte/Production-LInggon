@@ -13,9 +13,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+
+        // semua yang ada disini adalah kolom berupa bentuk db
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name'); //ingat ya masuk MODEL harus dengan variable yang sama
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
