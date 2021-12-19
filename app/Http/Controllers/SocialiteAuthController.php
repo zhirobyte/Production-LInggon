@@ -9,12 +9,12 @@ use Laravel\Socialite\Facades\Socialite;
 use Exception;
 
 
-
 class SocialiteAuthController extends Controller
 {
     public function googleRedirect()
     {
         return Socialite::driver('google')->redirect();
+        
     }
 
     /**
@@ -24,6 +24,7 @@ class SocialiteAuthController extends Controller
      */
     public function loginWithGoogle()
     {
+
         try {
 
             $googleUser = Socialite::driver('google')->user();
@@ -31,21 +32,21 @@ class SocialiteAuthController extends Controller
 
             if($user){
                 Auth::login($user);
-                return redirect('/home');
+                Auth::loginUsingId($user->id);
             }
 
             else{
                 $createUser = User::create([
-                    'name' => $googleUser->name,
+                    'username' => $googleUser->username,
                     'email' => $googleUser->email,
                     'google_id' => $googleUser->id,
                     'password' => encrypt('test@123')
                 ]);
 
                 Auth::login($createUser);
-                return redirect('/home');
+               
             }
-
+            return redirect('/home');
         } catch (Exception $exception) {
             dd($exception->getMessage());
         }

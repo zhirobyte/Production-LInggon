@@ -25,11 +25,7 @@ class User extends Authenticatable
         'password',
         'google_id',
         'email',
-        'nama_pembeli',
-        'alamat',
-        'no_telp',
-        'tgl_lahir',
-        'pekerjaan',
+        
 
 
     ];

@@ -58,7 +58,7 @@
                                 </button>
 
                                 <!-- Google Login Button -->
-                                <a href="{{ route('auth/google') }}" class="btn btn-danger">
+                                <a href="{{ route('oauth/google') }}" class="btn btn-danger">
                                     {{ __('Login with Google') }}
                                 </a>
                             </div>
