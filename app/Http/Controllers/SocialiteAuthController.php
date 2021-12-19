@@ -32,21 +32,21 @@ class SocialiteAuthController extends Controller
 
             if($user){
                 Auth::login($user);
-                Auth::loginUsingId($user->id);
+                return redirect('/home');
             }
 
             else{
                 $createUser = User::create([
-                    'username' => $googleUser->username,
+                    'name' => $googleUser->name,
                     'email' => $googleUser->email,
                     'google_id' => $googleUser->id,
                     'password' => encrypt('test@123')
                 ]);
 
                 Auth::login($createUser);
-               
+                return redirect('/home');
             }
-            return redirect('/home');
+           
         } catch (Exception $exception) {
             dd($exception->getMessage());
         }

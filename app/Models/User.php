@@ -21,7 +21,7 @@ class User extends Authenticatable
     // ini adalah model untuk user 
 
     protected $fillable = [
-        'username',
+        'name',
         'password',
         'google_id',
         'email',
