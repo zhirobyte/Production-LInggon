@@ -1,7 +1,4 @@
 <?php
-
-
-
 namespace App\Http\Controllers;
 
 use Auth;
@@ -22,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 
 Auth::routes();
