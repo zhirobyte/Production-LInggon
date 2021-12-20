@@ -39,7 +39,7 @@ class SocialiteAuthController extends Controller
             //pre condition dimana jika user telah masuk maka redirect home
             if($user){
                 Auth::login($user);
-                Auth::loginUsingId($user->id);
+                
             }
 
             else{
@@ -53,12 +53,12 @@ class SocialiteAuthController extends Controller
                 ]);
 
                 Auth::login($createUser);
-         
+    
             }
+            
             return redirect('/home');
         } catch (Exception $exception) {
             dd($exception->getMessage());
         }
     }
 }
-
