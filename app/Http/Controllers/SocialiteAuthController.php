@@ -39,7 +39,6 @@ class SocialiteAuthController extends Controller
             //pre condition dimana jika user telah masuk maka redirect home
             if($user){
                 Auth::login($user);
-                
             }
 
             else{
@@ -50,6 +49,7 @@ class SocialiteAuthController extends Controller
                     'email' => $googleUser->email,
                     'google_id' => $googleUser->id,
                     'password' => encrypt('test@123')
+                
                 ]);
 
                 Auth::login($createUser);

@@ -35,7 +35,6 @@
                     @endauth
                 </div>
             @endif
-
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
@@ -128,5 +127,20 @@
                 </div>
             </div>
         </div>
+
+
+
+        <!-- <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-secondary">
+                                    {{ __('Login') }}
+                                </button>
+
+                               
+                                <a href="{{ route('oauth/google') }}" class="btn btn-danger">
+                                 {{ __('Login with Google') }}
+                                </a>
+                            </div> -->
+
     </body>
 </html>
