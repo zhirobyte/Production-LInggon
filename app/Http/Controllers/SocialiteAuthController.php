@@ -42,7 +42,6 @@ class SocialiteAuthController extends Controller
             }
 
             else{
-
                 //sebaliknya jika kondisi user belum tersedia, maka create function dijalankan
                 $createUser = User::create([
                     'name' => $googleUser->name,
