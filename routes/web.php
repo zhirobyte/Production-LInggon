@@ -25,7 +25,11 @@ Auth::routes();
 
 //// ini adalah route buat auth dan login 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+
+Route::get('/admin/dashboard', 'App\Http\Controllers\AdminController@index')->name('admin');
+
 Route::get('google', [SocialiteAuthController::class, 'googleRedirect'])->name('oauth/google');
+
 Route::get('/oauth/google/callback', [SocialiteAuthController::class, 'loginWithGoogle']);
 
 //kalau ini route buat produk dan list lainnya 
@@ -37,3 +41,9 @@ Route::get('admin', function () {
     return view('admin_template');
 });
 
+
+Auth::routes();
+
+Route::get('/home', function() {
+    return view('home');
+})->name('home')->middleware('auth');

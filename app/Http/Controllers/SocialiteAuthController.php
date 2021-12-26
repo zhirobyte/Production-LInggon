@@ -56,7 +56,7 @@ class SocialiteAuthController extends Controller
     
             }
             
-            return redirect('/home');
+            return redirect('/admin/dashboard');
         } catch (Exception $exception) {
             dd($exception->getMessage());
         }
