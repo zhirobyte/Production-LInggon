@@ -18,7 +18,9 @@
     <title>Hello, world!</title>
   </head>
   <body>
+  <div class="col text-center">
     <h1>Hello, world!</h1>
+  </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -32,8 +34,8 @@
     -->
     <div class="col text-center">
 
-<div class="card-group">
-  <div class="card"style="width: 18rem;">
+    <div class="card-deck" >
+  <div class="card"style="width: 10rem;">
     <img class="card-img-top" src="{{URL::asset('/image/vidio.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Menu satu</h5>
@@ -42,7 +44,7 @@
   </div>
 
 
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 10rem;">
     <img class="card-img-top" src="{{URL::asset('/image/halo.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Menu Dua</h5>
@@ -51,7 +53,7 @@
   </div>
 
 
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 10rem;">
     <img class="card-img-top" src="{{URL::asset('/image/ovo.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">menu tiga</h5>
