@@ -4,7 +4,9 @@
 @section('title', 'AdminLTE')
 
 @section('content_header')
+<div class="col text-center">
     <h1 class="m-0 text-dark">Dashboard Admin di folder admin</h1>
+</div>
 @stop
 
 @section('content')
@@ -34,12 +36,14 @@
     -->
     <div class="col text-center">
 
-    <div class="card-deck" >
-  <div class="card"style="width: 10rem;">
+<div class="card-deck" >
+
+<div class="card"style="width: 10rem;">
     <img class="card-img-top" src="{{URL::asset('/image/vidio.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Menu satu</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
 
@@ -49,6 +53,7 @@
     <div class="card-body">
       <h5 class="card-title">Menu Dua</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
 
@@ -58,8 +63,9 @@
     <div class="card-body">
       <h5 class="card-title">menu tiga</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
-    
+
   </div>
 </div>
      
