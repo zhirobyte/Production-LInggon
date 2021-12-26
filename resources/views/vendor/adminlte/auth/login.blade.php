@@ -68,14 +68,13 @@
                                  {{ __('Login with Google') }}
                                 </a>
             </div>
-        </div>
-        <div class="form-group row align-items-center">
+
+            <div class="col-5">
                 <button type=submit class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}">
                     <span class="fas fa-sign-in-alt"></span>
                     {{ __('adminlte::adminlte.sign_in') }}
                 </button>
             </div>
-<<<<<<< HEAD
 
             <div class="form-group row align-items-center">
             
@@ -91,17 +90,8 @@
                 </div>
 
         </div>
-=======
-            
-            
->>>>>>> 2f8f342c80daa0ca6300b1bf4752c7b294c50701
 
     </form>
-    <div class="form-group row align-items-center">
-                <a href="{{ route('oauth/google') }}" class="btn btn-danger">
-                    {{ __('Login with Google') }}
-                </a>
-            </div>
 @stop
 
 @section('auth_footer')
