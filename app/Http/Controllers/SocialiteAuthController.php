@@ -35,6 +35,7 @@ class SocialiteAuthController extends Controller
             //ambil library socialite driver google untuk mendapatkan google account varibale
             $googleUser = Socialite::driver('google')->user();
             $user = User::where('google_id', $googleUser->id)->first();
+        
             
             //pre condition dimana jika user telah masuk maka redirect home
             if($user){
@@ -47,15 +48,21 @@ class SocialiteAuthController extends Controller
                     'name' => $googleUser->name,
                     'email' => $googleUser->email,
                     'google_id' => $googleUser->id,
+                    'is_admin' => 2, // Assigned role id
                     'password' => encrypt('test@123')
-                
+                    
                 ]);
 
-                Auth::login($createUser);
-    
-            }
             
-            return redirect('/admin/dashboard');
+                Auth::login($createUser);              
+            }
+
+            if (auth()->user()->is_admin == 1) {
+                return redirect('/admin/dashboard');
+            }else{
+                return redirect('/home');
+            }
+            // return redirect('/admin/dashboard');
         } catch (Exception $exception) {
             dd($exception->getMessage());
         }

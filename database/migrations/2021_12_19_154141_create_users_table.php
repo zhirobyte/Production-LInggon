@@ -17,13 +17,13 @@ class CreateUsersTable extends Migration
         // semua yang ada disini adalah kolom berupa bentuk db
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->integer('role')->nullable();
+            $table->boolean('is_admin')->nullable();
             $table->string('name'); //ingat ya masuk MODEL harus dengan variable yang sama
-            $table->string('password');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('gender')->nullable();
-            $table->date('birth_date')->nullable();
+            $table->string('password');
+            $table->string('google_id')->nullable();
+            $table->string('gender')->nullable(); 
+            $table->date('birth_date')->nullable(); 
             $table->string('profession')->nullable();
             $table->string('address')->nullable();
             $table->string('province')->nullable();
@@ -31,11 +31,12 @@ class CreateUsersTable extends Migration
             $table->string('district')->nullable();
             $table->string('zip_code')->nullable();
             $table->string('instagram')->nullable();
-            $table->integer('phone')->nullable();
+            $table->string('phone')->nullable();         
             $table->rememberToken();
-            $table->string('google_id')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });
+
     }
 
     /**

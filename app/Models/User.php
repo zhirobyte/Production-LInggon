@@ -24,7 +24,7 @@ class User extends Authenticatable
     // yang memiliki limit penggunaan variable "username"
 
     protected $fillable = [
-        'role',
+        'is_admin',
         'name',
         'password',
         'google_id',
@@ -39,6 +39,7 @@ class User extends Authenticatable
         'zip_code',
         'instagram',
         'phone',
+
     ];
 
     /**

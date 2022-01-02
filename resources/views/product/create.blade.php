@@ -1,4 +1,7 @@
-@extends('product.layout')
+
+@extends('adminlte::page')
+
+@section('title', 'AdminLTE')
 @section('content')
 
 <form action="{{url('product')}}" method="POST">

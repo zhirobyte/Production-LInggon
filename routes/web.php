@@ -32,6 +32,10 @@ Route::get('google', [SocialiteAuthController::class, 'googleRedirect'])->name('
 
 Route::get('/oauth/google/callback', [SocialiteAuthController::class, 'loginWithGoogle']);
 
+//roote ini buat milih admin dan tidaknya 
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+
+
 //kalau ini route buat produk dan list lainnya 
 Route::resource('product', ProductController::class);
 
