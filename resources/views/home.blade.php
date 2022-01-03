@@ -16,6 +16,7 @@
         </style>
     </head>
     <body>
+
     <div class="card bg-dark text-black">
         <img src="assets/img/welcome.png" class="img-fluid" alt="Responsive image">
         <div class="card-img-overlay">
@@ -24,7 +25,7 @@
             <p class="card-text"><strong>January 2022<strong></p>
         </div>
         </div>
-
+        <marquee><h2>Welcome to Linggon Indonesia</h2></marquee>
   <div class="card-deck">
          @foreach ($dataproduct as $dataproduct)
          <div class="card">
@@ -34,14 +35,13 @@
                 <h5 class="card-title"><strong> Rp. {{ $dataproduct->harga_product }}</strong></h5><br>
                 <p class="card-text">{{ $dataproduct->detail }}</p><br>
                 <div class="text-center">
-                <a href="/product" class="btn btn-primary" >BUY NOW</a>
+                <a href="{{ url('product/' . $dataproduct->id ) }}" class="btn btn-primary">BUY NOW</a>
                 </div>
             </div>
             </div>
-    @endforeach
-  
+        @endforeach
     </div>
-            
+    
     </body>
     </body>
 </html>

@@ -9,8 +9,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: url("{{ asset('assets/img/welcome.png') }}");
-                color: #636b6f;
+                background-image: url("{{ asset('assets/img/1.jpg') }}");
+                color: #ffffff;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 0;
@@ -53,13 +53,15 @@
         </style>
     </head>
     <body>
+        
+    <marquee><h2>Silahkan Login terlebih dahulu</h2></marquee>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" style="background-color:white;">Home</a>
                     @else
-                    <a href="{{ route('login') }}" class="btn btn-primary btn-lg">Login</a>
+                    <a href="{{ route('login') }}" style="background-color:white;">Login</a>
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
