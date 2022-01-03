@@ -21,7 +21,7 @@ class CreateProductTable extends Migration
             $table->string('detail');
             $table->string('pengrajin');
             $table->string('kategori');
-            $table->string('image');
+            $table->string('image')->nullable();  
             $table->timestamps();
 
         });

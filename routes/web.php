@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\ProductController;
+use App\Models\Product;
 use Auth;
 
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,8 @@ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::get('/admin/dashboard', 'App\Http\Controllers\AdminController@index')->name('admin');
 
+Route::get('/user/dashboard', 'App\Http\Controllers\AdminController@index')->name('admin');
+
 Route::get('google', [SocialiteAuthController::class, 'googleRedirect'])->name('oauth/google');
 
 Route::get('/oauth/google/callback', [SocialiteAuthController::class, 'loginWithGoogle']);
@@ -49,5 +52,6 @@ Route::get('admin', function () {
 Auth::routes();
 
 Route::get('/home', function() {
-    return view('home');
+    $dataproduct = Product::all();
+    return view('home', compact('dataproduct'));
 })->name('home')->middleware('auth');

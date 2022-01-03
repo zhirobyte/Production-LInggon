@@ -56,7 +56,7 @@ class SocialiteAuthController extends Controller
             
                 Auth::login($createUser);              
             }
-
+            /////
             if (auth()->user()->is_admin == 1) {
                 return redirect('/admin/dashboard');
             }else{

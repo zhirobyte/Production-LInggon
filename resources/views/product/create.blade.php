@@ -8,7 +8,9 @@
 @csrf
 <div class="container">
 
-    
+<div class="pull-left">
+                <h2>Laman Product Linggon</h2>
+            </div>
         <!-- input form buat nama  -->
         <div class="form-group row align-items-center">
                     <label for="inputNamaProduk" class="col-sm-2 col-form-label">Nama Produk</label>
@@ -72,12 +74,14 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                <button class="btn btn-primary btn-lg">Save Data</button>
+                <button type="submit" class="btn btn-primary btn-lg">Save Data</button>
                 </div>
             </div>
+
+          
+       
         </div>
      
 </form>
-<h5 class="text-center">Page of Create Product</h5>
-<h6 class="text-center">Faiz Hanafi - 2021</h6>
+
 @endsection

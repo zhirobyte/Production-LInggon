@@ -39,31 +39,31 @@
 <div class="card-deck" >
 
 <div class="card"style="width: 10rem;">
-    <img class="card-img-top" src="{{URL::asset('/image/vidio.png')}}" alt="Card image cap">
+    <img class="card-img-top" src="{{URL::asset('/image/product.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Menu satu</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <a href="/product/create/" class="btn btn-primary">Go somewhere</a>
+      <a href="/product" class="btn btn-primary">Product</a>
     </div>
   </div>
 
 
   <div class="card" style="width: 10rem;">
-    <img class="card-img-top" src="{{URL::asset('/image/halo.png')}}" alt="Card image cap">
+    <img class="card-img-top" src="{{URL::asset('/image/user.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Menu Dua</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <p class="card-text">>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <a href="#" class="btn btn-primary">User</a>
     </div>
   </div>
 
 
   <div class="card" style="width: 10rem;">
-    <img class="card-img-top" src="{{URL::asset('/image/ovo.png')}}" alt="Card image cap">
+    <img class="card-img-top" src="{{URL::asset('/image/order.png')}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">menu tiga</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-primary">Order</a>
     </div>
 
   </div>

@@ -2,6 +2,7 @@
 
 @section('adminlte_css_pre')
     <link rel="stylesheet" href="{{ asset('vendor/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+    
 @stop
 
 @php( $login_url = View::getSection('login_url') ?? config('adminlte.login_url', 'login') )
@@ -21,6 +22,7 @@
 @section('auth_header', __('adminlte::adminlte.login_message'))
 
 @section('auth_body')
+
     <form action="{{ $login_url }}" method="post">
         @csrf
 

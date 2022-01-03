@@ -1,13 +1,16 @@
-@extends('product.layout')
+
+@extends('adminlte::page')
+
+@section('title', 'AdminLTE')
      
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="col-lg-10 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 8 CRUD with Image Upload sample linggon</h2>
+                <h2>Laman Product Linggon</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('product.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="/product/create"> Create New Product</a>
             </div>
         </div>
     </div>
@@ -29,9 +32,10 @@
             <th>Image</th>
             <th width="280px">Action</th>
         </tr>
+
         @foreach ($product as $product)
         <tr>
-            <td>{{ ++$i }}</td>
+
             <td>{{ $product->nama_product }}</td>
             <td>{{ $product->harga_product }}</td>
             <td>{{ $product->stock }}</td>

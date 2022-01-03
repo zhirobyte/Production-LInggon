@@ -14,7 +14,6 @@ class ProductController extends Controller
      */
     public function index()
     {
-        // 
         $product = Product::all();
         return view('product.index', compact('product'));
     }
@@ -27,8 +26,9 @@ class ProductController extends Controller
     public function create()
     {
         //
-        $product = Product::all();
-        return view('product.index', compact('product'));
+        $product = new Product;
+        return view('product.create', compact('product'));
+     
     }
 
     /**
@@ -47,28 +47,22 @@ class ProductController extends Controller
             'detail' => 'required',
             'pengrajin' => 'required',
             'kategori' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
-  
-   
+        
+       
         $product = new Product();
         $product->nama_product =$request->nama_product;
         $product->harga_product =$request->harga_product;
         $product->stock =$request->stock;
         $product->detail =$request->detail;
         $product->pengrajin =$request->pengrajin;
-        $product->kategori =$request->kategori;
-
-        if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        }
-    
+        $product->kategori = $request->kategori;
+        $path = $request->file('image')->store('public/images');
+        $product->image = $path;
         $product->save();
-        return redirect()->route('product.index')
-                        ->with('success','Product created successfully.');
+       
+        return redirect()->route('product')->with('success','Product created successfully.');
     }
 
     /**
@@ -113,10 +107,10 @@ class ProductController extends Controller
             'detail' => 'required',
             'pengrajin' => 'required',
             'kategori' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
   
-   
+        $path = $request->file('image')->store('public/images');
         $product = new Product();
         $product->nama_product =$request->nama_product;
         $product->harga_product =$request->harga_product;
@@ -124,13 +118,7 @@ class ProductController extends Controller
         $product->detail =$request->detail;
         $product->pengrajin =$request->pengrajin;
         $product->kategori =$request->kategori;
-
-        if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        }
+        $product->image = $path;
     
         $product->save();
         return redirect()->route('product.index')
