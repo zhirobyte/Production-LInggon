@@ -13,6 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <!-- Styles -->
         <style>
+            
         </style>
     </head>
     <body>
@@ -26,23 +27,29 @@
         </div>
         </div>
         <marquee><h2>Welcome to Linggon Indonesia</h2></marquee>
+        
   <div class="card-deck">
          @foreach ($dataproduct as $dataproduct)
          <div class="card">
             <img class="card-img-top" src="{{ asset('image/' . $dataproduct->image ) }}"  alt="Card image cap">
             <div class="card-body">
-                <h4 class="card-title"><strong>{{ $dataproduct->nama_product }}</strong></h4><br>
-                <h5 class="card-title"><strong> Rp. {{ $dataproduct->harga_product }}</strong></h5><br>
-                <p class="card-text">{{ $dataproduct->detail }}</p><br>
+                <h4 class="card-title" style="color:#808080";><strong>{{ $dataproduct->nama_product }}</strong></h4><br>
+                <h5 class="card-title"  style="color:#808080"; ><strong> Rp. {{ $dataproduct->harga_product }}</strong></h5><br>
+                <p class="card-text" style="color:#A9A9A9"; >{{ $dataproduct->detail }}</p><br>
                 <div class="text-center">
-                <a href="{{ url('product/' . $dataproduct->id ) }}" class="btn btn-primary">BUY NOW</a>
-                </div>
+                <a href="{{ url('order/' . $dataproduct->id ) }}" class="btn btn-primary">BUY NOW</a>
+            </div>
             </div>
             </div>
         @endforeach
+        <br>
     </div>
+
+    <div class="col text-center">
+    <a href="/order/checkout" class="btn btn-primary">Order Test</a>
+    </div>
+
     
-    </body>
     </body>
 </html>
 

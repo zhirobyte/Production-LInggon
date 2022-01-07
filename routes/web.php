@@ -26,10 +26,13 @@ Auth::routes();
 
 //// ini adalah route buat auth dan login 
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
+Route::get('/order', 'App\Http\Controllers\OrderController@index')->name('order');
 
 Route::get('/admin/dashboard', 'App\Http\Controllers\AdminController@index')->name('admin');
 
-Route::get('/user/dashboard', 'App\Http\Controllers\AdminController@index')->name('admin');
+Route::get('/order/checkout', 'App\Http\Controllers\OrderController@index')->name('order');
+
+Route::get('/user/dashboard', 'App\Http\Controllers\AdminController@index')->name('user');
 
 Route::get('google', [SocialiteAuthController::class, 'googleRedirect'])->name('oauth/google');
 
@@ -41,6 +44,7 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 
 //kalau ini route buat produk dan list lainnya 
 Route::resource('product', ProductController::class);
+Route::resource('user', UserController::class);
 
 
 

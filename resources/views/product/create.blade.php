@@ -7,7 +7,9 @@
 <form action="{{url('product')}}" method="POST">
 @csrf
 <div class="container">
-
+    <div class="col text-center">
+    <a href="/admin/dashboard" class="btn btn-primary">Dashboard</a>
+    </div>
 <div class="pull-left">
                 <h2>Laman Product Linggon</h2>
             </div>

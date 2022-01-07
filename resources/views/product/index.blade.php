@@ -9,8 +9,9 @@
             <div class="pull-left">
                 <h2>Laman Product Linggon</h2>
             </div>
-            <div class="pull-right">
+            <div class="pull-center">
                 <a class="btn btn-success" href="/product/create"> Create New Product</a>
+                <a href="/admin/dashboard" class="btn btn-primary">Dashboard</a>
             </div>
         </div>
     </div>

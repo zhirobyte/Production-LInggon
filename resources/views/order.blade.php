@@ -19,9 +19,9 @@
     <form>
           
   <div class="form-row">
-  <input type="text" class="form-control" id="inputNama" name="idUser" value=" {{ Auth::user()->id}}" hidden>
+  <input type="text" class="form-control" id="inputNama" name="idUser" >
   
-  <input type="text" class="form-control" id="inputProduct" name="idProduct" value="{{$product->id }}" hidden>
+  <input type="text" class="form-control" id="inputProduct" name="idProduct" >
 
     <div class="form-group col-md-6">
       <label for="inputTelp">No.Telp</label>

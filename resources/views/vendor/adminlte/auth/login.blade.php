@@ -72,7 +72,7 @@
             </div>
 
             <div class="col-5">
-                <button type=submit class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}">
+                <button type=submit class="btn btn-block {{ config('adminlte.classes_auth_btn', 'btn-flat btn-primary') }}"  >
                     <span class="fas fa-sign-in-alt"></span>
                     {{ __('adminlte::adminlte.sign_in') }}
                 </button>
@@ -94,6 +94,17 @@
         </div>
 
     </form>
+
+    <div class="modal fade" id="loginMod" role="dialog" arialabelledby="modalLabel" area-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+ 
+                     <img src="/asset/img/check.png" width="" height="" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
 @stop
 
 @section('auth_footer')

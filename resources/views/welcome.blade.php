@@ -9,7 +9,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: url("{{ asset('assets/img/1.jpg') }}");
+                background-image: url("{{ asset('assets/img/2.png') }}");
                 color: #ffffff;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -59,11 +59,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
+                    
                         <a href="{{ url('/home') }}" style="background-color:white;">Home</a>
                     @else
                     <a href="{{ route('login') }}" style="background-color:white;">Login</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" style="background-color:white;">Register</a>
                         @endif
                     @endauth
                 </div>
