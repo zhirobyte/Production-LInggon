@@ -46,10 +46,10 @@
     </div>
 
     <div class="col text-center">
-    <a href="/order/checkout" class="btn btn-primary">Order Test</a>
+    <a href="/order/checkout" class="btn btn-primary">Button Order Test</a>
     </div>
 
-    
+
     </body>
 </html>
 
